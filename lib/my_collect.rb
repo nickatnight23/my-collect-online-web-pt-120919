@@ -1,6 +1,9 @@
-def my_collect(collection)
-  array=[jordans, nike, addidas,reebok]
-  my_collect(array) do |collection|
-    collection.split("").first
+def my_collect(array)
+  i = 0
+  collect = []
+  while i < array.length
+    collect << yield(array[i])
+    i+=1
+  end
   end
 
